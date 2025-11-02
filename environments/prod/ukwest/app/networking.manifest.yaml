@@ -1,0 +1,8 @@
+extends: ../../../../bicep/app/networking/networking.manifest.yaml
+
+stack:
+  name: az-stack-networking-ukwest
+  deployment:
+    location: ukwest
+  template:
+    parameters: ../../../../bicep/app/networking/networking.ukwest.bicepparam

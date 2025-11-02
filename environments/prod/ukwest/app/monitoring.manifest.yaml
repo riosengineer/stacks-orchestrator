@@ -1,0 +1,8 @@
+extends: ../../../../bicep/app/monitoring/monitoring.manifest.yaml
+
+stack:
+  name: az-stack-monitoring-ukwest
+  deployment:
+    location: ukwest
+  template:
+    parameters: ../../../../bicep/app/monitoring/monitoring.ukwest.bicepparam

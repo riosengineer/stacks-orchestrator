@@ -1,0 +1,8 @@
+stack:
+  name: az-stack-networking
+  deployment:
+    subscription: true
+    location: uksouth
+  template:
+    file: ./networking.bicep
+    parameters: ./networking.bicepparam

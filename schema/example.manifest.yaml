@@ -1,0 +1,37 @@
+# yaml-language-server: $schema=./manifest.schema.json
+extends:
+- ../bicep/app/main.manifest.yaml
+
+stack:
+  name: az-stack-app-prod-uks
+  description: Example production app workload for UK South
+  deployment:
+    subscription: true
+    location: uksouth
+  template:
+    file: ../bicep/app/main.bicep
+    parameters: ../bicep/app/main.bicepparam
+  extraAzArgs:
+  - --subscription
+  - 00000000-0000-0000-0000-000000000000 # Ensure the stack targets the correct subscription when orchestrating across tenants
+  - --tags
+  - environment=prod
+  - costCenter=app
+
+dependencies:
+- name: shared
+  stackName: az-stack-shared
+  outputs:
+    frontDoorHostname: frontDoorHostname
+- name: monitoring
+  stackName: az-stack-monitoring
+  outputs:
+    appInsightsConnectionString: applicationInsightsConnectionString
+
+exports:
+  publicEndpoint: appPublicEndpoint
+  appId: appClientId
+
+parameterBindings:
+  parFrontDoorHostname: shared.frontDoorHostname
+  parAppInsightsConnectionString: monitoring.appInsightsConnectionString

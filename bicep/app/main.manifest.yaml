@@ -1,0 +1,14 @@
+stack:
+  name: az-stack-app
+  deployment:
+    subscription: true
+    location: uksouth
+  template:
+    file: ./main.bicep
+    parameters: ./main.bicepparam
+
+dependencies:
+- name: monitoring
+  stackName: az-stack-monitoring
+- name: networking
+  stackName: az-stack-networking

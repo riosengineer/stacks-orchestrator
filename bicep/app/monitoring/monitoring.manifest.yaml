@@ -1,0 +1,8 @@
+stack:
+  name: az-stack-monitoring
+  deployment:
+    subscription: true
+    location: uksouth
+  template:
+    file: ./monitoring.bicep
+    parameters: ./monitoring.bicepparam

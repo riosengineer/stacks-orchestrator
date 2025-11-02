@@ -1,0 +1,6 @@
+extends: ../../../../bicep/app/networking/networking.manifest.yaml
+
+stack:
+  name: az-stack-networking-dev
+  template:
+    parameters: ../../../../bicep/app/networking/networking.dev.bicepparam

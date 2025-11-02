@@ -1,0 +1,1 @@
+extends: ../../../../bicep/app/networking/networking.manifest.yaml

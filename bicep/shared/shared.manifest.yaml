@@ -1,0 +1,9 @@
+stack:
+  name: az-stack-shared
+  description: Front Door profile for downstream web apps
+  deployment:
+    subscription: true
+    location: uksouth
+  template:
+    file: ./main.bicep
+    parameters: ./main.bicepparam

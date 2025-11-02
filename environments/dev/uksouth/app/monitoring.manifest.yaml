@@ -1,0 +1,6 @@
+extends: ../../../../bicep/app/monitoring/monitoring.manifest.yaml
+
+stack:
+  name: az-stack-monitoring-dev
+  template:
+    parameters: ../../../../bicep/app/monitoring/monitoring.dev.bicepparam

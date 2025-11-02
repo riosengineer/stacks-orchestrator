@@ -1,0 +1,12 @@
+extends: ../../../../bicep/app/main.manifest.yaml
+
+stack:
+  name: az-stack-app-dev
+  template:
+    parameters: ../../../../bicep/app/main.dev.bicepparam
+
+dependencies:
+- name: monitoring
+  stackName: az-stack-monitoring-dev
+- name: networking
+  stackName: az-stack-networking-dev

@@ -1,0 +1,1 @@
+extends: ../../../../bicep/app/monitoring/monitoring.manifest.yaml

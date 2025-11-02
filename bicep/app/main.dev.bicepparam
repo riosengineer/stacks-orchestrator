@@ -1,0 +1,12 @@
+using './main.bicep'
+
+param parLocation = 'uksouth'
+param parWebAppName = 'rioswebapp-dev-001'
+param parAppServicePlanName = 'appserviceplan-dev'
+param parResourceGroupName = 'rg-app-dev'
+param parKeyVaultName = 'kvstacksappdev001'
+param parSqlServerName = 'sqlserverstacksdev001'
+param parSqlDatabaseName = 'sqldb-dev'
+param parSqlServerAdminLogin = 'sqladminuser'
+param parMonitoringStackName = 'az-stack-monitoring-dev'
+param parNetworkingStackName = 'az-stack-networking-dev'

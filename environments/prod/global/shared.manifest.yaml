@@ -1,0 +1,11 @@
+extends: ../../../bicep/shared/shared.manifest.yaml
+
+stack:
+  template:
+    parameters: ../../../bicep/shared/main.bicepparam
+
+dependencies:
+- name: app
+  stackName: az-stack-app
+- name: app-ukwest
+  stackName: az-stack-app-ukwest
