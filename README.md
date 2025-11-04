@@ -5,6 +5,9 @@ Lightweight tooling for orchestrating Azure Bicep Deployment Stacks with a Terra
 > [!WARNING]
 > This project is a proof of concept and **not** production ready. Testing has been limited. Please feel free to test it out with the sample `bicep/` stacks. Feedback welcome!
 
+> [!TIP]
+> Check out the video demo of this on [Vimeo](https://vimeo.com/1130000507?share=copy&fl=sv&fe=ci) and the [Bicep Community Call](https://www.youtube.com/watch?v=8ugu0rSiWxg&t=1549s).
+
 ## Quick start
 
 ### Prerequisites
