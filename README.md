@@ -2,6 +2,9 @@
 
 Lightweight tooling for orchestrating Azure Bicep Deployment Stacks with a Terragrunt-style inspired framework.
 
+> [!WARNING]
+> This project is a proof of concept and **not** production ready. Testing has been limited. Please feel free to test it out with the sample `bicep/` stacks. Feedback welcome!
+
 ## Quick start
 
 ### Prerequisites
@@ -137,6 +140,7 @@ parameterBindings:
 
 In that scenario the dependent template stays decoupled from the DNS stack; the orchestrator resolves the export and passes it along even during `--skip-dependencies` runs.
 
+> [!NOTE]
 > Azure deployment stacks currently don’t support secure outputs between stacks. Use Key Vault references or managed identities if you need to share secrets.
 
 ### Mapping dependency outputs (when you need to)
