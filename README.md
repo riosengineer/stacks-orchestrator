@@ -30,6 +30,9 @@ python tools/stack_orchestrator.py --root "." --dry-run
 # Deploy the full prod environment (global + every region)
 python tools/stack_orchestrator.py --root "environments/prod" --parallelism 4
 
+# Deploy only the prod/uksouth environment 
+python tools/stack_orchestrator.py --root "environments/prod/uksouth" --parallelism 4
+
 # Deploy only the prod/uksouth app overlays
 python tools/stack_orchestrator.py --root "environments/prod/uksouth/app" --parallelism 4
 
@@ -114,7 +117,7 @@ All manifests share the same contract (enforced via `schema/manifest.schema.json
 
 Refer to `schema/example.manifest.yaml` for a full, realistic sample manifest that exercises every field described above.
 
-> **Note**
+> [!NOTE]
 > When deploying stacks that live in different subscriptions, add `--subscription {subscription-id}` to `stack.extraAzArgs` (as shown in the example manifest) so the orchestrator runs each Azure CLI invocation against the correct subscription.
 
 ## Why Split Into Orchestrated Micro Stacks?
