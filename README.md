@@ -122,7 +122,7 @@ Refer to `schema/example.manifest.yaml` for a full, realistic sample manifest th
 
 ## Why Split Into Orchestrated Micro Stacks?
 
-- **Micro deployment pattern** – splitting landing zones out of monolithic resource groups into micro stacks enables granular RBAC so teams manage only what they need while staying under the 4 MB ARM template limit and avoiding large-template timeouts.
+- **Micro deployment pattern** – splitting landing zones out of monolithic resource groups into micro stacks enables granular RBAC so teams manage only what they need while staying under the 4 MB ARM template limit and minimising blast-radius.
 - **Dependency mapping** – YAML manifests declare stack dependencies; the orchestrator resolves them and prints a dependency map with dry-run output, similar to a what-if view for stack relationships.
 - **Parallelism** – independent stacks can deploy concurrently with the `--parallelism` switch, whether you target a single stack, an app, or an entire environment.
 - **Targeted rollouts** – running the orchestrator against production, a region, or specific stacks (for example `--stacks stack1 stack2`) discovers the manifests in scope, orders them correctly, and deploys as the dependency map dictates.
